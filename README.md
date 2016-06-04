@@ -1,6 +1,14 @@
+### TODO:
+
+- Fix bug for search function
+- SEO
+- Google-analytics
+- Change color for posts block
+
+
 ### 我的博客
 
-地址：[http://yansu.org](http://yansu.org)
+地址：[http://ruixmizzou.com](http://ruixmizzou.com)
 
 ### 安装说明
 
