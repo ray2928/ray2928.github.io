@@ -38,6 +38,6 @@ A trick to increase your load speed: load your main content first and then the a
 
 Three measuring websites:
 
-  1. AKAIMIMOBITEST.COM
-  2. SPEEDGUN.io
-  3. YELLOWLAB.COM
+  1. http://mobitest.akamai.com/m/index.cgi
+  2. http://speedgun.io/
+  3. http://yellowlab.com/
