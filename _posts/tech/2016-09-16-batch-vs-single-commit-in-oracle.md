@@ -10,24 +10,23 @@ The slowness of loading data to Oracle has been a problem for a week.
 After reading [this post](https://www.simple-talk.com/sql/performance/comparing-multiple-rows-insert-vs-single-row-insert-with-three-data-load-methods/), My colleagues and I came up with an idea to change from loading row one by one and instead using a batch to increase the speed.
 
 ### Pseudo code for using batch writer
-{% highlight java %}
-/**
- *  def writer = new BatchWriter()
- *
- *  while (some condition... ) {
- *     writer.write(actions)
- *  }
- *  writer.flushCurrentBatch()
-*/
-{% endhighlight %}
+    {% highlight java %}
+      def writer = new BatchWriter()
+
+      while (some condition... ) {
+         writer.write(actions)
+      }
+      writer.flushCurrentBatch()
+
+    {% endhighlight %}
 
 
 ###To create a BatchWriter Class:
-{% highlight java %}
-BatchWriter(Sql oracleWriter) {
-  this.connection = oracleWriter.getDataSource().getConnection()
-  this.connection.setAutoCommit(false)
-}
-{% endhighlight %}
+    {% highlight java %}
+    BatchWriter(Sql oracleWriter) {
+      this.connection = oracleWriter.getDataSource().getConnection()
+      this.connection.setAutoCommit(false)
+    }
+    {% endhighlight %}
 
 By using batch writer, we are able to increase our loading performance from 10,000/sec to 400,000/sec, a huge improvement!
