@@ -21,7 +21,8 @@ After reading [this post](https://www.simple-talk.com/sql/performance/comparing-
     {% endhighlight %}
 
 
-###To create a BatchWriter Class:
+To create a BatchWriter Class:
+
     {% highlight java %}
     BatchWriter(Sql oracleWriter) {
       this.connection = oracleWriter.getDataSource().getConnection()
